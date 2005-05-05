@@ -300,12 +300,12 @@ mpiPi_profile_print (FILE * fp)
 
     nowstruct = localtime (&mpiPi.start_timeofday);
     if (strftime (nowstr, 128, fmtstr, nowstruct) == (size_t) 0)
-      mpiPi_msg_warn ("Could not get string from strftime()\n");
+      printf ("Could not get string from strftime()\n");
     print_intro_line (fp, "Start time", "%s", nowstr);
 
     nowstruct = localtime (&mpiPi.stop_timeofday);
     if (strftime (nowstr, 128, fmtstr, nowstruct) == (size_t) 0)
-      mpiPi_msg_warn ("Could not get string from strftime()\n");
+      printf ("Could not get string from strftime()\n");
     print_intro_line (fp, "Stop time", "%s", nowstr);
   }
 
